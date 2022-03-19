@@ -285,6 +285,8 @@ void loop()
       if (cur_time - start_time > 5000 && millis()>2000)
       {       
         buzzer.playFrequency(DIV_BY_10 | 445, 50, 15);
+       
+       // have the robot move in a forward semi circle
         balanceDrive( 5,  10);
         balanceDoDriveTicks();
         GetMotorAndAngleMeasurements();
@@ -303,6 +305,7 @@ void loop()
       else
       {
 
+       // have the robot move in a backward semi circle
         balanceDrive(-5, -10);
         balanceDoDriveTicks();
         
