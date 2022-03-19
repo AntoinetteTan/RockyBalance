@@ -284,6 +284,7 @@ void loop()
 
       if (cur_time - start_time > 5000 && millis()>2000)
       {       
+       // Have robot move forward
         buzzer.playFrequency(DIV_BY_10 | 445, 50, 15);
         balanceDrive( 5,  5);
         balanceDoDriveTicks();
@@ -303,6 +304,7 @@ void loop()
       else
       {
 
+       // Have robot spin in a circle
         balanceDrive(-5, 5);
         balanceDoDriveTicks();
         
